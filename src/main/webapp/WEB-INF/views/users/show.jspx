@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_real_umssimulator_User" object="${user}" path="/users" z="PdMtx34B4Hqar4uDvq2FwmQ5BAw=">
+        <field:display field="service_id" id="s_com_real_umssimulator_User_service_id" object="${user}" z="yPUkrqbcqoWKClbHyhWnIKUPkUA="/>
+        <field:display field="transaction_id" id="s_com_real_umssimulator_User_transaction_id" object="${user}" z="wkB4d2HxuyKPvILNbE5l+xB9s1U="/>
+        <field:display date="true" dateTimePattern="${user_effective_date_date_format}" field="effective_date" id="s_com_real_umssimulator_User_effective_date" object="${user}" z="WN5oCSTCc9BsCqU+zXZsqJq17F4="/>
+        <field:display date="true" dateTimePattern="${user_create_date_date_format}" field="create_date" id="s_com_real_umssimulator_User_create_date" object="${user}" z="wzXmdnNjqe8G5M4Uzjwc5Z0m0Ec="/>
+        <field:display field="reason" id="s_com_real_umssimulator_User_reason" object="${user}" z="QKlP/GIGLJjNiOsdT85z0UqWUA0="/>
+        <field:display date="true" dateTimePattern="${user_expiry_date_date_format}" field="expiry_date" id="s_com_real_umssimulator_User_expiry_date" object="${user}" z="GufX6eO0Z8+huvZD7cpqKTjHGWU="/>
+        <field:display field="guid" id="s_com_real_umssimulator_User_guid" object="${user}" z="LqloXoKnR0bMoUK1WYsnSsjHjv4="/>
+    </page:show>
+</div>

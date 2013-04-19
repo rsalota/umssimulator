@@ -1,0 +1,86 @@
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-17 18:13:45
+project --topLevelPackage com.real.umssimulator
+jpa setup --provider HIBERNATE --database HYPERSONIC_PERSISTENT
+entity jpa --class com.real.umssimulator.User --permitReservedWords 
+field string --fieldName service_id --notNull 
+field string --fieldName transaction_id --notNull 
+field date --fieldName effective_date --type java.util.Date
+field date --fieldName create_date --type java.util.Date
+web mvc setup
+controller all --package com.real.umssimulator
+json all
+web mvc json all
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-17 18:18:05
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-17 18:27:23
+focus --class ~.User
+field string --fieldName reason 
+field date --fieldName expiry_date ---type java.util.Date 
+json all
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-17 18:30:19
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2013-04-17 18:34:39
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-17 19:19:19
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-17 19:22:11
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-17 19:22:24
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-17 19:22:33
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2013-04-17 19:31:06
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-17 19:35:55
+web mvc json all
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-17 19:36:03
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-17 19:36:17
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-17 19:36:28
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-17 19:39:37
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-17 19:39:55
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-17 19:42:48
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-17 19:42:56
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-17 19:51:08
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-17 19:51:22
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-17 19:51:31
+// [failed] focus --class ~.Usere
+focus --class ~.User
+field string --fieldName guid 
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-17 19:52:08
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-17 20:00:53
+hint
+help
+finder list --class ~.User
+finder add --finderName findUsersByGuidEquals
+finder add --finderName findUsersByTransaction_idEquals
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-17 20:08:53
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-17 20:43:51
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-17 20:44:03
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-17 20:55:09
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-17 20:55:21
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-17 20:59:14
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-17 20:59:21
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-17 21:01:47
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-17 21:02:19
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-17 22:16:29
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-17 22:17:31
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-17 22:19:40
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-17 22:19:48
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-17 22:20:31
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-17 22:20:37
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-17 22:24:14
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-17 22:24:20
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-17 22:41:14
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-17 22:41:22
