@@ -7,5 +7,9 @@
             <menu:item id="i_user_new" messageCode="global_menu_new" url="/users?form" z="Zv1m8u2rG+JFKcvJ+AHVVK0ey24="/>
             <menu:item id="i_user_list" messageCode="global_menu_list" url="/users?page=1&amp;size=${empty param.size ? 10 : param.size}" z="4MY4uybxa60Q1G2rlI5bOwg+sm0="/>
         </menu:category>
+        <menu:category id="c_mockresponse" z="nWwy0wQQw+oTJUrFDoe94kFopMo=">
+            <menu:item id="i_mockresponse_new" messageCode="global_menu_new" url="/mockresponses?form" z="tUmRUH08/9k6l80d0UTx/m5HIWE="/>
+            <menu:item id="i_mockresponse_list" messageCode="global_menu_list" url="/mockresponses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="sjq09C+G6gGzvPLy0yk1PH2tOEc="/>
+        </menu:category>
     </menu:menu>
 </div>

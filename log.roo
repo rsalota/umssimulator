@@ -84,3 +84,18 @@ exit
 // Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-17 22:41:14
 exit
 // Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-17 22:41:22
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-25 22:18:41
+entity jpa --class ~.MockResponse
+field string --fieldName guid --notNull 
+field number --fieldName responseCode --type java.lang.Integer --notNull 
+controller all --package com.real.umssimulator
+web mvc json all
+web mvc all --package com.real.umssimulator
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-25 22:27:59
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-26 00:05:36
+focus --class ~.MockResponse
+finder list
+finder add --finderName findMockResponsesByGuidEquals
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-26 00:06:43

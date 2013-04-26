@@ -14,10 +14,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RooWebScaffold(path = "users", formBackingObject = User.class)
 @RooWebJson(jsonObject = User.class)
 public class UserController {
-	
-	@RequestMapping("/{guid}")
-	public @ResponseBody ResponseEntity<String> findByGuid(@PathVariable("guid") String guid){
-		User u = User.findUsersByGuidEquals(guid).getSingleResult();
-		return new ResponseEntity<String>(u.toJson(),HttpStatus.OK);
-	}
+
+    @RequestMapping("/{guid}")
+    @ResponseBody
+    public ResponseEntity<java.lang.String> findByGuid(@PathVariable("guid") String guid) {
+        User u = User.findUsersByGuidEquals(guid).getSingleResult();
+        return new ResponseEntity<String>(u.toJson(), HttpStatus.OK);
+    }
 }

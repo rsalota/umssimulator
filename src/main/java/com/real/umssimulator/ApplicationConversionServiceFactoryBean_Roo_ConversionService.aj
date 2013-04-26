@@ -4,6 +4,7 @@
 package com.real.umssimulator;
 
 import com.real.umssimulator.ApplicationConversionServiceFactoryBean;
+import com.real.umssimulator.MockResponse;
 import com.real.umssimulator.User;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.core.convert.converter.Converter;
@@ -12,6 +13,30 @@ import org.springframework.format.FormatterRegistry;
 privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService {
     
     declare @type: ApplicationConversionServiceFactoryBean: @Configurable;
+    
+    public Converter<MockResponse, String> ApplicationConversionServiceFactoryBean.getMockResponseToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.real.umssimulator.MockResponse, java.lang.String>() {
+            public String convert(MockResponse mockResponse) {
+                return new StringBuilder().append(mockResponse.getGuid()).append(' ').append(mockResponse.getResponseCode()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, MockResponse> ApplicationConversionServiceFactoryBean.getIdToMockResponseConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.real.umssimulator.MockResponse>() {
+            public com.real.umssimulator.MockResponse convert(java.lang.Long id) {
+                return MockResponse.findMockResponse(id);
+            }
+        };
+    }
+    
+    public Converter<String, MockResponse> ApplicationConversionServiceFactoryBean.getStringToMockResponseConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.real.umssimulator.MockResponse>() {
+            public com.real.umssimulator.MockResponse convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), MockResponse.class);
+            }
+        };
+    }
     
     public Converter<User, String> ApplicationConversionServiceFactoryBean.getUserToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.real.umssimulator.User, java.lang.String>() {
@@ -38,6 +63,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     }
     
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
+        registry.addConverter(getMockResponseToStringConverter());
+        registry.addConverter(getIdToMockResponseConverter());
+        registry.addConverter(getStringToMockResponseConverter());
         registry.addConverter(getUserToStringConverter());
         registry.addConverter(getIdToUserConverter());
         registry.addConverter(getStringToUserConverter());

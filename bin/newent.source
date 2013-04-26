@@ -1,12 +1,13 @@
-alias newEntity='curl -v -s  -X PUT -d @ce.json -H "Accept:application/json" -H "Content-Type:application/json"  http://localhost:8080/umssimulator/users/ABCS/services/'
+alias newEntity='curl -v -s  -X PUT -d @ce.json http://localhost:8080/umssimulator/users/ABCS/services/'
 alias newPostEntity='curl -v -s  -X PUT -d @ce.json -H "Accept:application/json" -H "Content-Type:application/json"  http://localhost:8080/umssimulator/users/'
-alias cancelEntity='curl -v -s  -X PUT -d @cancel.json -H "Accept:application/json" -H "Content-Type:application/json"  http://localhost:8080/umssimulator/users/ABCS/services/1'
+alias cancelEntity='curl -v -s  -X PUT -d @cancel.json   http://localhost:8080/umssimulator/users/ABCS/services/1'
+alias getServiceByTrans='curl -v -s  -X GET http://localhost:8080/users/ABCD/services/1'
 
 alias devSimNewEntity='curl -v -s  -X PUT -d @ce.json -H "Accept:application/json" -H "Content-Type:application/json"  http://devumssim.elasticbeanstalk.com/users/ABCS/services/'
 alias devSimNewPostEntity='curl -v -s  -X POST -d @ce.json -H "Accept:application/json" -H "Content-Type:application/json"  http://localhost:8080/umssimulator/users/'
 alias devSimCancelEntity='curl -v -s  -X PUT -d @cancel.json -H "Accept:application/json" -H "Content-Type:application/json"  http://devumssim.elasticbeanstalk.com/users/ABCS/services/1'
 
-alias devSimGetServiceByTrans='curl -v -s  -X GET -d @cancel.json -H "Accept:application/json" -H "Content-Type:application/json"  http://devumssim.elasticbeanstalk.com/users/ABCD/services/1'
+alias devSimGetServiceByTrans='curl -v -s  -X GET http://devumssim.elasticbeanstalk.com/users/ABCD/services/1'
 alias devSimCancelEntityBug='curl -v -s  -X PUT -d @cancel.json -H "Accept:application/json" -H "Content-Type:application/json" http://devumssim.elasticbeanstalk.com/users/4BE1CA1BA03A4EC7A8D06403F4C2CB5E/services/115364645?id_type=uds'
 
 
