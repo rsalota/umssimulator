@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_real_umssimulator_MockResponse" object="${mockresponse}" path="/mockresponses" z="cpEQ08ozDNElHXEzuSlRzHUOfGM=">
+        <field:display field="guid" id="s_com_real_umssimulator_MockResponse_guid" object="${mockresponse}" z="LD0Ux045K7xVhoweoJ6psXONifE="/>
+        <field:display field="responseCode" id="s_com_real_umssimulator_MockResponse_responseCode" object="${mockresponse}" z="kvs5aM2kCFA1nV4qpGEO51d4LzM="/>
+    </page:show>
+</div>
